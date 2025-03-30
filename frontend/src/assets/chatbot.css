@@ -1,0 +1,183 @@
+/* .chat-container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+} */
+
+.chat-container {
+  width: 100%;
+  max-width: 800px; /* Slightly reduced width for a more focused look */
+  height: 430px; /* Fixed height to create a more structured container */
+  margin: auto;
+  border: 1px solid #e0e0e0; /* Softer border color */
+  border-radius: 12px; /* Slightly larger border radius for elegance */
+  background: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box {
+  flex-grow: 1; /* Allow chat box to expand and fill available space */
+  height: calc(100% - 120px); /* Subtract input area height */
+  overflow-y: auto;
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between avatar and message */
+  max-width: 80%;
+  margin-bottom: 8px;
+}
+
+.chat-box {
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex; /* Use flexbox for vertical stacking */
+  flex-direction: column; /* Stack messages vertically */
+  gap: 5px; /* Space between messages */
+  /* Ensure chat-box takes full width to allow right alignment */
+  width: 100%;
+}
+
+
+.user {
+  align-self: flex-end; /* Push the entire wrapper to the right */
+  flex-direction: row; /* Avatar on the left, text on the right */
+  justify-content: flex-end;
+}
+
+.bot {
+  align-self: flex-start; /* Keep bot messages on the left */
+  flex-direction: row; /* Avatar on the left, text on the right */
+  justify-content: flex-start;
+}
+
+.message-text {
+  padding: 8px 12px;
+  border-radius: 10px; /* Slightly larger radius for a bubble effect */
+  background-color: inherit; /* Inherit from parent */
+  display: inline-block;
+  word-wrap: break-word;
+  max-width: 100%; /* Ensure text doesn’t overflow */
+}
+
+/* Push user message text to the right within the wrapper */
+.user .message-text {
+  background-color: #d1e7fd;
+  text-align: right;
+  margin-left: auto; /* Pushes the text to the right */
+}
+
+/* Keep bot message text on the left */
+.bot .message-text {
+  background-color: #d4edda;
+  text-align: left;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures images fit nicely in the circle */
+  flex-shrink: 0; /* Prevent avatar from shrinking */
+}
+
+/* Customize avatars */
+.user .avatar {
+  background-color: #007bff; /* Blue for user */
+}
+
+.bot .avatar {
+  background-color: #28a745; /* Green for bot */
+}
+
+.chat-input {
+  display: flex;
+  padding: 12px;
+  gap: 8px;
+  background-color: #ffffff;
+  width: 100%; /* Make the input container full width */
+}
+
+.chat-input input {
+  /* border-color: #1a73e8;
+  box-shadow: 0 0 0 1px rgba(26, 115, 232, 0.1); */
+  flex: 1; /* This will make the input field take up all available space */
+  padding: 8px 12px;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+
+}
+
+.chat-input button {
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  background-color: #1a73e8;
+  color: white;
+}
+
+.clear-btn {
+  background-color: #ea4335 !important;
+  color: white;
+
+}
+/* Website container */
+.website-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; /* Giảm từ 20px xuống 10px */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Website header */
+
+.website-header {
+  text-align: center;
+  margin-bottom: 20px; /* Giảm từ 30px xuống 15px */
+  width: 100%;
+}
+
+.website-title {
+  font-size: 32px;
+  background: linear-gradient(135deg, #2980b9, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.website-subtitle {
+  font-size: 16px;
+  color: #546e7a;
+  margin-top: 5px;
+  font-weight: 400;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
