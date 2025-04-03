@@ -20,7 +20,7 @@ vectorizer = TfidfVectorizer(ngram_range=(1, 3), analyzer='char_wb')
 X_train_tfidf = vectorizer.fit_transform(X_train)
 
 # Train model
-model = SVC(kernel='linear', probability=True, C=10)
+model = SVC(kernel='rbf', probability=True, C=100, gamma=0.1)
 model.fit(X_train_tfidf, y_train)
 
 # Save files
